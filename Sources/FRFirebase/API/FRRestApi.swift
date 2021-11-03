@@ -58,7 +58,7 @@ enum FRRestApi {
     }
     
     // MARK: - Fetch ONE Document and return VIEW MODEL
-    static func fetchViewModel<T: Codable, M: DefaultConstructible>(model: T.Type,
+    static func fetchViewModel<T: Codable, M: FRViewModel>(model: T.Type,
                                                                     viewModel: M.Type,
                                                                     ref: DocumentReference,
                                                                     completion: @escaping (Result<M, Error>) -> Void) {
@@ -120,7 +120,7 @@ enum FRRestApi {
     }
     
     // MARK: - Fetch MANY Documents and return VIEW MODELs
-    static func fetchViewModels<T: Codable, M: DefaultConstructible>(model: T.Type,
+    static func fetchViewModels<T: Codable, M: FRViewModel>(model: T.Type,
                                                                      viewModel: M.Type,
                                                                      query: Query,
                                                                      limit: Int? = nil,
@@ -168,7 +168,7 @@ enum FRRestApi {
     }
     
     // MARK: - Listen ONE Document and return VIEW MODEL
-    static func listenViewModel<T: Codable, M: DefaultConstructible>(model: T.Type,
+    static func listenViewModel<T: Codable, M: FRViewModel>(model: T.Type,
                                                                      viewModel: M.Type,
                                                                      ref: DocumentReference,
                                                                      completion: @escaping (Result<M, Error>) -> Void,
@@ -232,7 +232,7 @@ enum FRRestApi {
     }
     
     // MARK: - Listen MANY Documents and return VIEW MODELs
-    static func listenViewModels<T: Codable, M: DefaultConstructible>(model: T.Type,
+    static func listenViewModels<T: Codable, M: FRViewModel>(model: T.Type,
                                                                       viewModel: M.Type,
                                                                       query: Query,
                                                                       limit: Int? = nil,

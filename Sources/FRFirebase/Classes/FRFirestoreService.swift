@@ -40,7 +40,7 @@ final class FRFirestoreService<T: Codable, M: FRViewModel>: NSObject {
     
     private var isLoading = false
     
-    public var models: [DefaultConstructible] = []
+    public var models: [FRViewModel] = []
     
     public var hashableModels: [AnyHashable] {
         if let models = models as? [AnyHashable] {
