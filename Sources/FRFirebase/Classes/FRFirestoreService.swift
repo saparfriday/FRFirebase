@@ -108,7 +108,7 @@ final class FRFirestoreService<T: Codable, M: FRViewModel>: NSObject {
             DispatchQueue.global(qos: .userInteractive).async { [weak self] in
                 
                 guard let strongSelf = self else { return }
-                FRApi.Rest.listenViewModels(model: T.self, viewModel: M.self, query: strongSelf.query, limit: self?.limit) { result in
+                FRFirebase.Rest.listenViewModels(model: T.self, viewModel: M.self, query: strongSelf.query, limit: self?.limit) { result in
                     switch result {
                     case .success((let genericVMs, _, let canLoadMore)):
                         self?.canLoadMore = canLoadMore
@@ -151,7 +151,7 @@ final class FRFirestoreService<T: Codable, M: FRViewModel>: NSObject {
             DispatchQueue.global(qos: .userInteractive).async { [weak self] in
                 
                 guard let strongSelf = self else { return }
-                FRApi.Rest.fetchViewModels(
+                FRFirebase.Rest.fetchViewModels(
                     model: T.self,
                     viewModel: M.self,
                     query: strongSelf.query,
