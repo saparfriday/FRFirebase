@@ -38,6 +38,7 @@ let package = Package(
             name: "FRFirebase",
             dependencies: [
                 .product(name: "FirebaseAuth", package: "Firebase"),
+                .product(name: "FirebaseFirestore", package: "Firebase"),
                 .product(name: "FacebookLogin", package: "Facebook"),
                 "GoogleSignIn"
             ]
