@@ -13,7 +13,7 @@ import AuthenticationServices
 import FacebookLogin
 import GoogleSignIn
 
-public class FRFirebaseSign: NSObject {
+private class FRFirebaseSign: NSObject {
     
     // MARK: - Data
     
@@ -94,6 +94,22 @@ public class FRFirebaseSign: NSObject {
         case .customPhone(let token, let phoneNumber):
             
             sign(with: token, type: type, phoneNumber: phoneNumber)
+        }
+    }
+    
+    public func verify(phoneNumber: String, completion: @escaping (FRFirebaseSignPhoneVerifyResult) -> Void) {
+        Auth.auth().languageCode = Locale.current.languageCode
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
+            if let error = error {
+                completion(.with(error))
+            }
+            
+            guard let verificationID = verificationID else {
+                completion(.verificationIdNotFound)
+                return
+            }
+            
+            completion(.success(verificationID))
         }
     }
     
