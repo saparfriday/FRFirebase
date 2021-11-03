@@ -27,7 +27,7 @@ public class FRFirebaseSign: NSObject {
     
     // MARK: - Init
     
-    init(viewController: UIViewController, delegate: FRFirebaseSignDelegate) {
+    public init(viewController: UIViewController, delegate: FRFirebaseSignDelegate) {
         self.viewController = viewController
         self.delegate = delegate
     }
