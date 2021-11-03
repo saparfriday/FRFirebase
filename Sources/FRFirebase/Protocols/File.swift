@@ -21,7 +21,7 @@ public enum FRFirebaseSignSuccess {
     case loading
 }
 
-protocol FRFirebaseSignDelegate: AnyObject {
+public protocol FRFirebaseSignDelegate: AnyObject {
     
     func signFailure(_ error: FRFirebaseSignError)
     
