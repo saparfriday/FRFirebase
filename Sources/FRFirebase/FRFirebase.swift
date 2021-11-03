@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FRFirebase {
+public enum FRFirebase {
     static var sign = FRFirebaseSign.self
     static var Rest = FRRestApi.self
 //    static var Helper = HelpersApi.self
