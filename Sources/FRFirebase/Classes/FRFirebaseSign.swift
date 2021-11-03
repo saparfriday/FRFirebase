@@ -13,7 +13,7 @@ import AuthenticationServices
 import FacebookLogin
 import GoogleSignIn
 
-private class FRFirebaseSign: NSObject {
+internal class FRFirebaseSign: NSObject {
     
     // MARK: - Data
     
