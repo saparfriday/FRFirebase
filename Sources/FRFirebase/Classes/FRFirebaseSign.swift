@@ -10,7 +10,7 @@ import Firebase
 import FirebaseAuth
 import CryptoKit
 import AuthenticationServices
-import FBSDKCoreKit
+import FacebookLogin
 import GoogleSignIn
 
 public class FRFirebaseSign: NSObject {

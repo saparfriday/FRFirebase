@@ -9,11 +9,11 @@ import Foundation
 
 enum FRApi {
     static var Rest = FRRestApi.self
-    static var Helper = HelpersApi.self
-    static var Storage = StorageApi.self
-    static var AppData = AppDataApi.self
-    static var Push = PushApi.self
-    
-    static var Query = QueriesApi.self
-    static var Ref = ReferencesApi.self
+//    static var Helper = HelpersApi.self
+//    static var Storage = StorageApi.self
+//    static var AppData = AppDataApi.self
+//    static var Push = PushApi.self
+//    
+//    static var Query = QueriesApi.self
+//    static var Ref = ReferencesApi.self
 }
